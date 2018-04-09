@@ -22,14 +22,22 @@
         background: linear-gradient(134.96deg, #ff6480 -0.07%, #f22e63 99.93%);
         height: 100vh;
         text-align: center;
-        padding-top: 10vh;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     .launch .logo {
         width: 150px;
+        position: relative;
+    }
+    
+    .launch .logo img {
+        max-width: 100%;
         position: relative;
     }
     
@@ -51,7 +59,7 @@
         background: url('img/txtbg.svg') no-repeat center center;
         background-size: contain;
         left: calc(50% - 300px);
-        top: 0;
+        top: calc(50% - 300px);
         opacity: 0.5;
     }
     
@@ -62,54 +70,77 @@
         position: relative;
     }
     
-    .launch .animation {
+    .pulse {
         position: absolute;
-        right: 0;
-        bottom: -130px;
+        top: 0;
+        left: calc(50% - 75px);
+        width: 150px;
+        height: 150px;
     }
     
-    .launch .img {
+    .pulse span,
+    .pulse:before,
+    .pulse:after {
+        content: '';
         position: absolute;
-        max-width: 600px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 0 solid #5abdde;
+        border-radius: 25%;
+        animation: da-pulse 1.5s ease-in-out 0s infinite;
+    }
+    
+    .pulse span {
+        border-color: #5abdde;
+        border-width: 4px;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+    }
+    
+    .pulse:before {
+        border-color: #1f7b9a;
+        border-width: 2px;
+        top: 0;
+        left: 0;
         right: 0;
         bottom: 0;
     }
     
-    @-webkit-keyframes goUp {
-        0%,
-        100% {
-            bottom: 0;
-        }
-        50% {
-            bottom: 30px;
-        }
+    .pulse:after {
+        border-color: #16596f;
+        border-width: 1px;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
     }
     
-    @keyframes goUp {
+    @keyframes da-pulse {
         0%,
         100% {
-            bottom: 0;
+            transform: scale(1.25);
+            opacity: 0;
         }
-        50% {
-            bottom: 30px;
+        48%,
+        52% {
+            transform: scale(1);
+            opacity: 1;
         }
-    }
-    
-    .launch .img--pc {
-        -webkit-animation: goUp 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        animation: goUp 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
     }
 </style>
 
 <body>
-    <section class="launch"> <img class="logo" src="img/logo.svg" />
+    <section class="launch">
+        <a class="logo" href="https://github.com/decembrist-revolt">
+            <p class="pulse"><span></span></p><img src="img/logo.svg" /></a>
         <h1 class="title">Coming soon</h1>
         <div class="txt">
             <p>Our website is under construction, we are working very hard</p>
         </div>
-        <div class="animation"> <img class="img img--lab" src="img/lab.png" /> <img class="img img--pc" src="img/pc.png" /> </div>
     </section>
 </body>
 
