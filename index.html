@@ -25,10 +25,12 @@
         padding-top: 10vh;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
+        position: relative;
     }
     
     .launch .logo {
         width: 150px;
+        position: relative;
     }
     
     .launch .title {
@@ -38,12 +40,26 @@
         line-height: 1.5;
         white-space: nowrap;
         text-shadow: 0.04em 0.04em 0 #982543;
+        position: relative;
+    }
+    
+    .launch:before {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: url('img/txtbg.svg') no-repeat center center;
+        background-size: contain;
+        left: calc(50% - 300px);
+        top: 0;
+        opacity: 0.5;
     }
     
     .launch .txt {
-        color: #982543;
-        font-size: 20px;
-        font-weight: 400;
+        color: #ffcfdb;
+        font-weight: 900;
+        font-size: 18px;
+        position: relative;
     }
     
     .launch .animation {
