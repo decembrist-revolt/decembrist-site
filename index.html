@@ -16,10 +16,19 @@
         overflow: hidden;
     }
     
+    @keyframes huerotator {
+        0% {
+            -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+        }
+    }
+    
     .launch {
         background: -webkit-linear-gradient(315.04deg, #ff6480 -0.07%, #f22e63 99.93%);
-        background: -o-linear-gradient(315.04deg, #ff6480 -0.07%, #f22e63 99.93%);
-        background: linear-gradient(134.96deg, #ff6480 -0.07%, #f22e63 99.93%);
         height: 100vh;
         text-align: center;
         -webkit-box-sizing: border-box;
@@ -61,6 +70,16 @@
         left: calc(50% - 300px);
         top: calc(50% - 300px);
         opacity: 0.5;
+    }
+    
+    .launch:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(308.66deg, #FF7676 -10.98%, #F54EA2 89.02%);
+        opacity: 0.2;
+        animation: huerotator 5s infinite alternate;
     }
     
     .launch .txt {
