@@ -1,13 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <meta charset="UTF-8">
-    <title>Decembrist</title>
+    <meta charset="utf-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" />
 </head>
+<style>
+    html,
+    body {
+        position: relative;
+        font-family: sans-serif;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .launch {
+        background: -webkit-linear-gradient(315.04deg, #ff6480 -0.07%, #f22e63 99.93%);
+        background: -o-linear-gradient(315.04deg, #ff6480 -0.07%, #f22e63 99.93%);
+        background: linear-gradient(134.96deg, #ff6480 -0.07%, #f22e63 99.93%);
+        height: 100vh;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .launch .logo {
+        width: 150px;
+        position: relative;
+    }
+    
+    .launch .logo img {
+        max-width: 100%;
+        position: relative;
+    }
+    
+    .launch .title {
+        font-family: "Black Han Sans", sans-serif;
+        color: #11e2d3;
+        font-size: 90px;
+        line-height: 1.5;
+        white-space: nowrap;
+        text-shadow: 0.04em 0.04em 0 #982543;
+        position: relative;
+    }
+    
+    .launch:before {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: url('img/txtbg.svg') no-repeat center center;
+        background-size: contain;
+        left: calc(50% - 300px);
+        top: calc(50% - 300px);
+        opacity: 0.5;
+    }
+    
+    .launch .txt {
+        color: #ffcfdb;
+        font-weight: 900;
+        font-size: 18px;
+        position: relative;
+    }
+    
+    .pulse {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 75px);
+        width: 150px;
+        height: 150px;
+    }
+    
+    .pulse span,
+    .pulse:before,
+    .pulse:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 0 solid #5abdde;
+        border-radius: 25%;
+        animation: da-pulse 1.5s ease-in-out 0s infinite;
+    }
+    
+    .pulse span {
+        border-color: #5abdde;
+        border-width: 4px;
+        top: 6px;
+        left: 6px;
+        right: 6px;
+        bottom: 6px;
+    }
+    
+    .pulse:before {
+        border-color: #1f7b9a;
+        border-width: 2px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .pulse:after {
+        border-color: #16596f;
+        border-width: 1px;
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+    }
+    
+    @keyframes da-pulse {
+        0%,
+        100% {
+            transform: scale(1.25);
+            opacity: 0;
+        }
+        48%,
+        52% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+</style>
+
 <body>
-<h1>DECEMBRIST.ORG</h1>
-<p>Coming Soon!!!</p>
-<a href="https://github.com/decembrist-revolt">GitHub</a>
+    <section class="launch">
+        <a class="logo" href="https://github.com/decembrist-revolt">
+            <p class="pulse"><span></span></p><img src="img/logo.svg" /></a>
+        <h1 class="title">Coming soon</h1>
+        <div class="txt">
+            <p>Our website is under construction, we are working very hard</p>
+        </div>
+    </section>
 </body>
+
 </html>
