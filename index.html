@@ -1,13 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <meta charset="UTF-8">
-    <title>Decembrist</title>
+    <meta charset="utf-8" />
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet" />
 </head>
+<style>
+    html,
+    body {
+        position: relative;
+        font-family: sans-serif;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .launch {
+        background: -webkit-linear-gradient(315.04deg, #ff6480 -0.07%, #f22e63 99.93%);
+        background: -o-linear-gradient(315.04deg, #ff6480 -0.07%, #f22e63 99.93%);
+        background: linear-gradient(134.96deg, #ff6480 -0.07%, #f22e63 99.93%);
+        height: 100vh;
+        text-align: center;
+        padding-top: 10vh;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .launch .logo {
+        width: 150px;
+    }
+    
+    .launch .title {
+        font-family: "Black Han Sans", sans-serif;
+        color: #11e2d3;
+        font-size: 90px;
+        line-height: 1.5;
+        white-space: nowrap;
+        text-shadow: 0.04em 0.04em 0 #982543;
+    }
+    
+    .launch .txt {
+        color: #982543;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    .launch .animation {
+        position: absolute;
+        right: 0;
+        bottom: -130px;
+    }
+    
+    .launch .img {
+        position: absolute;
+        max-width: 600px;
+        right: 0;
+        bottom: 0;
+    }
+    
+    @-webkit-keyframes goUp {
+        0%,
+        100% {
+            bottom: 0;
+        }
+        50% {
+            bottom: 30px;
+        }
+    }
+    
+    @keyframes goUp {
+        0%,
+        100% {
+            bottom: 0;
+        }
+        50% {
+            bottom: 30px;
+        }
+    }
+    
+    .launch .img--pc {
+        -webkit-animation: goUp 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        animation: goUp 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+</style>
+
 <body>
-<h1>DECEMBRIST.ORG</h1>
-<p>Coming Soon!!!</p>
-<a href="https://github.com/decembrist-revolt">GitHub</a>
+    <section class="launch"> <img class="logo" src="img/logo.svg" />
+        <h1 class="title">Coming soon</h1>
+        <div class="txt">
+            <p>Our website is under construction, we are working very hard</p>
+        </div>
+        <div class="animation"> <img class="img img--lab" src="img/lab.png" /> <img class="img img--pc" src="img/pc.png" /> </div>
+    </section>
 </body>
+
 </html>
